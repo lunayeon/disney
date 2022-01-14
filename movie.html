@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./js/jquery-3.6.0.min.js">
+    <style>
+         @font-face {
+        font-family: 'New Walt Disney UI Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('New Walt Disney UI Regular'), url('New Walt Disney UI.woff') format('woff');
+        }
+
+        @font-face {
+        font-family: 'New Walt Disney Font Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('New Walt Disney Font Regular'), url('New Walt Disney.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'waltFont';
+            src: url(./sauce/font/WaltDisney.ttf);
+        }
+        @font-face {
+            font-family: 'waltFontUi';
+            src: url(./sauce/font/WaltDisney_UI.ttf);
+        }
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+        .nanumgothic * {
+        font-family: 'Nanum Gothic', sans-serif;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-6Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        
+        .lnb{
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            /* float: left; */
+        }
+        .lnb ul{
+            display: block;
+            float: right;
+            justify-content: space-between;
+        }
+        .lnb li{float: left;}
+        .lnb li a{
+            font-family: 'waltFontUi';
+            color: #fff;
+            display: block;
+            padding: 1.3em 3em;
+        }
+        .lnb li a:hover {
+            color: #f5d5b3;
+        }
+        .lnb a img{
+            width: 80px;
+            margin: 0.3em 0 0 4em;
+        }
+
+        .logo img{position: fixed; width: 300px; top: 600px; 
+           left: 2em; text-align: center; line-height: 0; color: #000;
+        }
+
+        .slide{
+            position: relative; width: 100%; height: 100vh; z-index: 1;
+            display: flex; margin: 0;
+            background: url(./image/Disney_Intro_HD_1080p.jpg) no-repeat;
+            background-size: cover;
+            opacity: 1;
+        }
+        .movie_sec{ 
+            position: relative; 
+            width: calc(100%/4); height: 100%;
+            /* border-right: 1px solid rgba(255, 255, 255, 0.15); */
+           
+        }
+        .movie_sec a{
+            display: block;
+            width: 100%; 
+        }
+        .title{
+            font-family: 'S-CoreDream-6Bold';
+            margin-top: 43px; font-size: 2em;
+            line-height: 40px; margin: 5em 0.1em 0.5em 0.7em;
+            color: #fff;
+        }
+                
+        .bg{
+             position: absolute;
+             z-index: 999;
+        } 
+        .backImg img{
+            position: absolute;
+            width: 100%; 
+            height: 100%;
+            filter: grayscale(100%);
+            transition: 1s;
+        }            
+        .backImg img:hover{filter: none;}
+
+        /* .bg2{background-image: url(./image/movie/1124_ENCANTO/encanto_mega.jpg); 
+            background-size: inherit; background-position-x: center;} 
+        .bg2:hover{opacity: 1;}
+
+        .bg3{background-image: url(./image/movie/1217_Spiderman_nowayhome/spider_mega_01.jpg); 
+             background-size: inherit; background-position-x: center;} 
+        .bg3:hover{opacity: 1;}
+
+        .bg4{background-image: url(./image/movie/1222_The_Kings_Man/kings_mega_01.jpg); 
+            background-size: inherit; background-position-x: center;} 
+        .bg4:hover{opacity: 1;} */
+
+        .movie_sec p {
+            font-size: 15px;
+            color: #fff;
+            margin: -0.5em 1.5em;
+        }
+        
+         footer {
+            	position:fixed; width:100%; height:40px; left:0px; bottom:0px; background:#000;	font:12px/3.3 verdana; 	letter-spacing:2px;	opacity:0.4;	z-index:10;}
+        footer ul {	position:absolute; 	bottom:0px; left:50px;}
+        footer ul li {	float:left;	margin-right:40px;}
+        footer ul li a{	color:#fff;}
+        footer span {position:absolute; color:#fff;	right:50px; bottom:0px;}
+
+    </style>
+</head>
+<body>
+    <nav class="lnb">
+        <a href="./disney.html"><img src="./image/icon/disney_logo_white.png" alt=""></a>
+        <ul>
+            <li><a href="./ourbuisness.html">COMPANY</a></li>
+            <li><a href="./ourbuisness.html">OUR BUSSINESSES</a></li>
+        </ul>
+    </nav>
+    <div class="slide">
+        <div class="movie_sec">
+            <a href="./eternals_1.html">
+            <div class="bg">
+                <h2 class="title">ETERNALS</h2>
+                <p>When you love something, you fight for it</p>
+            </div>
+            <div class="backImg">
+                <img src="./image/movie/1105_ETERNALS/eternals_mega_01.jpg" alt="">
+            </div>
+        </a>
+        </div>
+        <div class="movie_sec">
+            <a href="#">
+            <div class="bg">
+                <h2 class="title">ENCANTO</h2>
+                <p>Magical house. Magical family.</p>
+            </div>
+            <div class="backImg">
+                <img src="./image/movie/1124_ENCANTO/encanto_mega.jpg" alt="">
+            </div>
+        </a>
+        </div>
+        <div class="movie_sec">
+            <a href="#">
+            <div class="bg">
+                <h2 class="title">SPIDER-MAN:No Way Home</h2>
+                <p>You have to make a wish carefully, Peter.</p>
+            </div>
+            <div class="backImg">
+                <img src="./image/movie/1217_Spiderman_nowayhome/spider_mega_01.jpg" alt="">
+            </div>
+        </a>
+        </div>
+        <div class="movie_sec">
+            <a href="#">
+            <div class="bg">
+                <h2 class="title">THE KING'S MAN</h2>
+                <p>Witness the birth of Kingsman hidden in the veil!</p>
+            </div>
+            <div class="backImg">
+                <img src="./image/movie/1222_The_Kings_Man/kings_mega_01.jpg" alt="">
+            </div>
+        </a>
+        </div>
+    </div>
+    <!-- section -->
+    <footer>
+        <ul>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">event</a></li>
+        </ul>
+        <span>copyright 2015 Disney All right reserved.</span>
+    </footer>
+    <!-- footer -->
+</body>
+</html>
